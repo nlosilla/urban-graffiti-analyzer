@@ -1,0 +1,5 @@
+{
+    "input_images": "input_images",
+    "output_crops": "output_crops",
+    "input_csv": "datos_grafitis.csv"
+}

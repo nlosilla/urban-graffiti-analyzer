@@ -1,0 +1,86 @@
+ETIQUETDOR DE GRAFITTIS
+
+Este repositorio contiene una herramienta interactiva en Python diseñada para la selección y clasificación manual de grafitis mediante recortes realizados directamente en imágenes digitales. El proyecto está orientado a investigaciones en etnografía urbana, arqueología del presente, análisis visual y estudios culturales que requieren extraer información estructurada a partir de fotografías.
+
+CARACTERÍSTICAS
+
+-Interfaz interactiva basada en OpenCV.
+-Selección de áreas mediante arrastre del ratón.
+-Clasificación inmediata usando el teclado.
+-Generación automática de nombres de archivo para cada recorte.
+-Registro de identificadores y coordenadas asociados al recorte.
+-Exportación final en un archivo Excel con todos los datos generados.
+-Sistema de configuración independiente mediante config.json.
+-Compatibilidad con Windows, macOS y Linux.
+
+ESTRUCTURA DEL PROYECTO
+
+El proyecto debe organizarse de la siguiente manera:
+-etiquetador_grafitis.py: archivo principal del programa.
+-config.json: archivo que contiene las rutas necesarias para la ejecución.
+-datos_grafitis.csv: archivo que incluye ID, coordenadas X/Y y nombre de la fotografía.
+-Carpeta input_images: contiene las imágenes originales.
+-Carpeta output_crops: almacena los recortes generados.
+
+REQUISITOS PREVIOS
+
+Para ejecutar correctamente la herramienta es necesario contar con:
+-Python 3.8 o superior.
+-Dependencias instaladas: OpenCV, Pandas y Pillow.
+-Un archivo CSV con los datos mínimos requeridos.
+-Un archivo de configuración válido.
+
+INSTALACIÓN
+
+-Descargar o clonar el repositorio en una carpeta local.
+-Crear y activar un entorno virtual (opcional pero recomendado).
+-Instalar las dependencias mediante:
+-pip install -r requirements.txt
+-Verificar que las carpetas input_images y output_crops existen y contienen la información esperada.
+-Configurar las rutas en el archivo config.json.
+
+CONFIGURACIÓN
+
+El archivo config.json debe incluir las rutas necesarias para que el programa pueda acceder a las imágenes, al archivo CSV y a la carpeta donde se guardarán los recortes. Un ejemplo de configuración es el siguiente:
+
+{
+  "input_images": "input_images",
+  "output_crops": "output_crops",
+  "input_csv": "datos_grafitis.csv"
+}
+
+USO DEL PROGRAMA
+
+-Ejecutar el script desde la carpeta raíz del proyecto mediante:
+	python etiquetador_grafitis.py
+-Seleccionar un área en la imagen arrastrando el ratón.
+-Asignar una categoría usando las teclas correspondientes.
+-Navegar entre imágenes con las teclas indicadas.
+-Finalizar la sesión para generar el archivo Excel con los recortes y metadatos.
+
+SALIDA GENERADA
+
+El programa produce:
+-Un archivo Excel con la información completa de los recortes.
+-Un conjunto de archivos de imagen que contienen cada recorte generado.
+
+LICENCIA
+
+Este proyecto se distribuye bajo la licencia MIT. Los usuarios pueden modificarlo, adaptarlo y redistribuirlo siempre que se mantenga la notificación de la licencia.
+
+AUTORÍA Y RECONOCIMIENTO
+
+El script ha sido desarrollado con la asistencia de ChatGPT (OpenAI), utilizando la versión GPT-5.1. Este trabajo puede citarse como:
+Losilla Martínez, N. (2025). Etiquetador de grafitis: herramienta interactiva para el análisis visual y espacial. GitHub.
+
+MIT License
+
+Copyright (c) 2025 Nicolás Losilla
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
